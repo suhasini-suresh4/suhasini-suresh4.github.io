@@ -1,0 +1,110 @@
+body {
+    background-color: wheat;
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
+    font-size: 1vw;
+}
+body > header {
+    background-color: orange;
+}
+body > footer {
+    background-color: orange;
+}
+body > main article {
+    width: 80%;
+    margin: auto;
+    /* auto aligns to the centre */
+}
+
+/* newsletter form is aligned to the centre */
+main > h2 {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+
+
+/* header section */
+/* h1 tag, with id = logo */
+/* adding a unique font, link in head */
+#logo {
+    margin: 0px;
+    padding: 8px;
+    color: white;
+    font-family: "Fredoka One", sans-serif;
+    width: 16%;
+    text-shadow: 
+    1px 1px 0px black, 
+    -1px 1px 0px black, 
+    1px -1px 0px black, 
+    -1px -1px 0px black ;
+}
+body > header > nav > ul {
+    list-style: none;
+    text-decoration: none;
+}
+/* body > header > nav > ul > a  --> change to class */
+.nav-button {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    border-radius: 100%;
+    /* changes images to circular */
+}
+
+
+/* CSS Layout session */
+#main-header {
+    display: flex;
+    /* changes whole header to flexbox */
+    height: 8vh;
+    /* increases the header box */
+    align-items: center;
+    /* aligns all elements vertically to the centre */
+    justify-content: space-around;
+}
+
+#nav-ul {
+    display: flex;
+}
+/* to space the nav buttons out by adding padding */
+#nav-ul > li {
+    padding: 8px;
+    margin: 16px;
+}
+/* increase clickable area of the nav buttons */
+.nav-button {
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+
+/* formatting the body's footer */
+body > footer {
+    display: flex;
+}
+#footer-ul {
+    display: flex;
+    list-style: none;
+}
+#footer-ul > div > li {
+    margin-left: 12px;
+}
+#footer-ul > div > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* adding a sidebar - adding divs and reformatting the code */
+#main-content {
+    display: flex;
+    justify-content: space-around;
+}
+#main-content > div {
+    width: 85%;
+}
