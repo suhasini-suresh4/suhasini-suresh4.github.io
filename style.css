@@ -1,98 +1,99 @@
 body {
-    background-color: wheat;
-    font-family: Helvetica, sans-serif;
+    background-color: #EDE3E9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
     margin: 0px;
-    font-size: 1vw;
+    font-size: 2vh;
 }
 body > header {
-    background-color: orange;
+    background-color: #58355E;
 }
 body > footer {
-    background-color: orange;
+    background-color: #58355E;
+}
+#subheading {
+    text-align: center;
+    padding: 10px;
 }
 body > main article {
     width: 80%;
     margin: auto;
-    /* auto aligns to the centre */
 }
 
-/* newsletter form is aligned to the centre */
-main > h2 {
+
+#signup {
     text-align: center;
 }
-form {
+main > form {
     text-align: center;
 }
 
 
-/* header section */
-/* h1 tag, with id = logo */
-/* adding a unique font, link in head */
-#logo {
-    margin: 0px;
-    padding: 8px;
-    color: white;
-    font-family: "Fredoka One", sans-serif;
-    width: 16%;
-    text-shadow: 
-    1px 1px 0px black, 
-    -1px 1px 0px black, 
-    1px -1px 0px black, 
-    -1px -1px 0px black ;
-}
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
-/* body > header > nav > ul > a  --> change to class */
-.nav-button {
-    color: white;
-    text-decoration: none;
-}
-
-img {
-    border-radius: 100%;
-    /* changes images to circular */
-}
-
-
-/* CSS Layout session */
-#main-header {
+#main-header-top {
     display: flex;
-    /* changes whole header to flexbox */
-    height: 8vh;
-    /* increases the header box */
+    height: 14vh;
+    color: white;
     align-items: center;
-    /* aligns all elements vertically to the centre */
-    justify-content: space-around;
+    justify-content: space-between;
 }
+#heading {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+#logo {
+    height: 10vh;
+}
+
 
 #nav-ul {
     display: flex;
+    flex-wrap: wrap;
+    /* wrap nav buttons onto new line if screen size too small */
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    padding-bottom: 2vh; 
+    padding-inline-start: 0;
 }
-/* to space the nav buttons out by adding padding */
 #nav-ul > li {
-    padding: 8px;
-    margin: 16px;
+    padding: 2vh 2vw;
+    margin: 1vh;
 }
-/* increase clickable area of the nav buttons */
 .nav-button {
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
+    text-decoration: none;
+    color: white;
+    /* padding: 12px 30px; */
+    padding: 2vh 4vw;
+    border: 1px solid white; 
+    border-radius: 1vh;
 }
 
 
-/* formatting the body's footer */
+#profile-pic {
+    border-radius: 100%;
+    border: 2px solid #58355E;
+    height: 10vh;
+}
+
+main > footer {
+    width: 80%;
+    margin: auto;
+    text-align: end;
+}
+
 body > footer {
     display: flex;
+    color: white;
+    align-items: center;
 }
 #footer-ul {
     display: flex;
     list-style: none;
+    padding: 0px 20px;
+
 }
 #footer-ul > div > li {
-    margin-left: 12px;
+    padding: 2px 15px;
 }
 #footer-ul > div > li > a {
     color: white;
@@ -100,11 +101,168 @@ body > footer {
 }
 
 
-/* adding a sidebar - adding divs and reformatting the code */
-#main-content {
+
+/* MOVIES PAGE */
+
+#movies {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* 150px for image, rest for text */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.movie {
+    display: contents; /* Makes children fill the grid cells */
+}
+
+.movie-image {
+    width: 100%; /* Make image fill the column */
+    height: auto; 
+    border: 1px solid black;
+}
+
+.movie-description {
+    margin: 0; 
+    text-align: left;
+}
+
+
+
+/* SHOWS PAGE */
+
+#shows {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* 150px for image, rest for text */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.show {
+    display: contents; /* Makes children fill the grid cells */
+}
+
+.show-image {
+    width: 100%; /* Make image fill the column */
+    height: auto; 
+    border: 1px solid black;
+}
+
+.show-description {
+    margin: 0; 
+    text-align: left;
+}
+
+
+
+
+/* HOME PAGE */
+
+.box-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow boxes to wrap on small screens */
+    width: 60%;
+    margin: auto;
+    padding: 1vh;
 }
-#main-content > div {
-    width: 85%;
+
+.box {
+    width: 80%;
+    margin: 2vh auto;
+    text-align: center;
+    border: 2px solid #58355E;
+    border-radius: 1vh;
+    overflow: hidden; /* Clip overflow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.box a {
+    text-decoration: none;
+    color: #58355E;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.box-image {
+    display: block;
+    margin: auto;
+    width: 10vh;
+    height: auto;
+    padding: 1vh;
+    padding-bottom: 0;
+    box-sizing: content-box; /* Keep image size intact */
+}
+
+.box-title {
+    padding: 10px;
+    background-color: #f0f0f0; /* Background for title */
+}
+
+
+
+/* ACTORS PAGE */
+
+#actors {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* 150px for image, rest for text */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.actor {
+    display: contents; /* Makes children fill the grid cells */
+}
+
+.actor-image {
+    width: 100%; /* Make image fill the column */
+    height: auto; 
+}
+
+.actor-description {
+    margin: 0; 
+    text-align: left;
+}
+
+
+/* SONGS PAGE */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+#alphabet {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2vh;
+}
+
+#alphabet > a {
+    text-decoration: underline;
+    color: #58355E;
+}
+
+#popular-songs {
+    text-align: center;
+}
+#song-list {
+    column-count: 2;
+    list-style-type: disc;
+    padding-inline-start: 20px;
+}
+
+#song-list > li {
+    padding: 0.5vh;
 }
