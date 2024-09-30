@@ -206,6 +206,10 @@ body > footer {
     background-color: #f0f0f0; /* Background for title */
 }
 
+#acknowledgement {
+    text-align: right;
+}
+
 
 
 /* ACTORS PAGE */
