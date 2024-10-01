@@ -130,6 +130,25 @@ body > footer {
 }
 
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #movies {
+        grid-template-columns: 1fr; /* Stacks items in one column */
+        grid-template-rows: auto auto; /* Image first, then description */
+        text-align: center;
+    }
+
+    .movie-image {
+        max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+        margin-bottom: 10px; 
+    }
+
+    .movie-description {
+        text-align: center; 
+    }
+}
+
+
 
 /* SHOWS PAGE */
 
@@ -158,7 +177,23 @@ body > footer {
     text-align: left;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #shows {
+        grid-template-columns: 1fr; /* Stacks items in one column */
+        grid-template-rows: auto auto; /* Image first, then description */
+        text-align: center;
+    }
 
+    .show-image {
+        max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+        margin-bottom: 10px;
+    }
+
+    .show-description {
+        text-align: center;
+    }
+}
 
 
 /* HOME PAGE */
@@ -206,10 +241,6 @@ body > footer {
     background-color: #f0f0f0; /* Background for title */
 }
 
-#acknowledgement {
-    text-align: right;
-}
-
 
 
 /* ACTORS PAGE */
@@ -237,6 +268,28 @@ body > footer {
     margin: 0; 
     text-align: left;
 }
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #actors {
+        grid-template-columns: 1fr; /* Stacks items in one column */
+        grid-template-rows: auto auto; /* Image first, then description */
+        text-align: center;
+    }
+
+    .actor-image {
+        max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+        margin-bottom: 10px; 
+    }
+
+    .actor-description {
+        text-align: center;
+    }
+}
+
+
+
 
 
 /* SONGS PAGE */
